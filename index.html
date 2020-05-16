@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <meta name='viewport' content='width=device-width'>
+    <title>Grocery</title>>
+</head>
+
+<body>
+    <section id="product-info">
+        <div id="product-image-container">
+            <img src="./images/soyabean-oil.webp" >
+        </div>
+        <div id="product-details">
+            <h1>Refined Soyabean Oil<span id='pouch-size-text'></span></h1>
+            <span id="product-price">Rs.480 </span>
+            <div id="packet-size">
+                <span class='muted-text'>Pack size</span><br>
+                <input type="radio" name="packet-size" value="960" id='qun-1' data-size='10L' checked>
+                <label for='qun-1'>
+                    10L <br> Rs. 960
+                </label>
+
+                <input type="radio" name="packet-size" value="480" id='qun-2' data-size='5L' >
+                <label for='qun-2'>
+                    5L <br> Rs. 480
+                </label>
+
+            </div>
+            <div id='quantity-container'>
+                <span class='muted-text'>Quantity :</span><br>
+                <div id='quantity-indicator'>
+                    <button onclick='decrement()'>-</button>
+                    <input type="text" name="quatity" value='1' id='quantity-number'>
+                    <button onclick='increment()'>+</button>
+                </div>
+                <div id='pay-area'>
+                    <button id='payable-button' onclick="topay()">Payable</button>
+                    
+                    <span id="payable-amount">
+                    
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="other-products">
+        <div class="product-column-1">
+            <div class="more-product">
+                <img src='./images/frutes-nuts.webp'>
+                <h3>Crunchy Fruit & Nut</h3>
+            </div>
+        </div>
+        <div class="product-column-2">
+            <div class="more-product">
+                <img src="./images/handwash.webp">
+                <h3>Sanitizers & Handwash</h3>
+            </div>
+            <div class="more-product">
+                <img src="./images/milk.webp">
+                <h3>Milk & Dairy</h3>
+            </div>
+            <div class="more-product">
+                <img src="./images/soyabean-oil.webp">
+                <h3>Cooking Oil</h3>
+            </div>
+            <div class="more-product">
+                <img src="./images/tea.webp">
+                <h3>Tea and Beverages</h3>
+            </div>
+        </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+
+</html>
